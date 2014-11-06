@@ -10,10 +10,10 @@
     It creates an hyperlink for each page found.
 
  */
- 
+
 /*
 	Evitando que o formulário seja submetido quando o usuário clicar no botão enter"
- */ 
+ */
 $(document).ready(function() {
     $("#content-container").css("display", "none");
     $("#results-container").css("display", "none");
@@ -78,6 +78,15 @@ var executaBusca = function() {
 
         return;
     }
+
+    paramValue = paramValue.toLowerCase();
+    paramValue = paramValue.replace(new RegExp('[ÁÀÂÃ]','gi'), 'a')
+                    .replace(new RegExp('[ÉÈÊ]','gi'), 'e')
+                    .replace(new RegExp('[ÍÌÎ]','gi'), 'i')
+                    .replace(new RegExp('[ÓÒÔÕ]','gi'), 'o')
+                    .replace(new RegExp('[ÚÙÛ]','gi'), 'u')
+                    .replace(new RegExp('[Ç]','gi'), 'c');
+
     var jsonParam = {"param":""+paramValue+""};
 
    $.blockUI({ message: '...' });
@@ -98,7 +107,7 @@ var executaBusca = function() {
 				$("#results").html("");
 				$("#content").html("");
 				if(data.articles.length == 0) {
-                    $("ul.ui-listview").quickPagination();
+				    $("ul.ui-listview").quickPagination();
                     $("#results").append("<p style='text-align:center'>Nenhum resultado encontrado!</p>");
                     $("#results-container").css("display", "inline");
                     $("#results").addClass("results");
@@ -123,7 +132,7 @@ var executaBusca = function() {
             }
             $.unblockUI();
         } // end error
-		
+
 	}); // end ajax
 }
 
@@ -144,7 +153,7 @@ var getContent = function(a) {
             $("#results-container").css("display", "none");
 			$("#param_search").css("display", "none");
 			$("#content-container").css("display", "inline");
-			$("#content").html("");	
+			$("#content").html("");
             $("#content").append(data.content);
             $("#content a").each(function(){
                 var url = $(this).attr('href');
@@ -168,5 +177,5 @@ var getContent = function(a) {
 var getBack = function() {
 	$("#content-container").css("display", "none");
 	$("#results-container").css("display", "inline");
-	$("#param_search").css("display", "inline");	
+	$("#param_search").css("display", "inline");
 }
