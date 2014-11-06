@@ -12,20 +12,24 @@
 	<dict>
 		<key>4F797E2B3476A39EAA2E11E1FECB676CB08FBC4D</key>
 		<string>https://github.com/Coffito/legislacao</string>
+		<key>CD41A891D3A40B7C4807ABE9A7552C232221BEC0</key>
+		<string>https://github.com/Coffito/legislacao-ios.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>platforms/ios/Legislacao.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>4F797E2B3476A39EAA2E11E1FECB676CB08FBC4D</key>
+		<string>../../../../../legislacao</string>
+		<key>CD41A891D3A40B7C4807ABE9A7552C232221BEC0</key>
 		<string>../../../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>https://github.com/Coffito/legislacao</string>
+	<string>https://github.com/Coffito/legislacao-ios.git</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>4F797E2B3476A39EAA2E11E1FECB676CB08FBC4D</string>
+	<string>CD41A891D3A40B7C4807ABE9A7552C232221BEC0</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
@@ -35,6 +39,14 @@
 			<string>4F797E2B3476A39EAA2E11E1FECB676CB08FBC4D</string>
 			<key>IDESourceControlWCCName</key>
 			<string>legislacao</string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>CD41A891D3A40B7C4807ABE9A7552C232221BEC0</string>
+			<key>IDESourceControlWCCName</key>
+			<string>legislacao-ios</string>
 		</dict>
 	</array>
 </dict>

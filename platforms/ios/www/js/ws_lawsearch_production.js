@@ -13,14 +13,15 @@
 
 /*
 	Evitando que o formulário seja submetido quando o usuário clicar no botão enter"
- */
+*/
 $(document).ready(function() {
     $("#content-container").css("display", "none");
     $("#results-container").css("display", "none");
 
-    $(window).keydown(function(event){
+   $(window).keydown(function(event){
     if( (event.keyCode == 13)) {
       event.preventDefault();
+      executaBusca();
       return false;
     }
     });
@@ -87,7 +88,7 @@ var executaBusca = function() {
                     .replace(new RegExp('[ÚÙÛ]','gi'), 'u')
                     .replace(new RegExp('[Ç]','gi'), 'c');
 
-    var jsonParam = {"param":""+paramValue+""};
+   var jsonParam = {"param":""+paramValue+""};
 
    $.blockUI({ message: '...' });
 
