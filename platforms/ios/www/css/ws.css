@@ -4,10 +4,15 @@
 	float: left;
 }
 
+#campo_search {
+	width: 150px;
+}
+
 .search-param-button {
 	position: relative;
-	top: -43px;
-	left: 205px;
+	top: -45px;
+	left: 165px;
+	width: 80px;
 }
 
 .results {
